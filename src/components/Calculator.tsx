@@ -4,7 +4,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
-import { AlertTriangle, Calculator, TrendingUp, TrendingDown, Info, CheckCircle } from 'lucide-react';
+import { AlertTriangle, Calculator as CalculatorIcon, TrendingUp, TrendingDown, Info, CheckCircle } from 'lucide-react';
 import { calculateImportCosts, type ImportCalculationInput, type CalculationBreakdown } from '@/lib/calculations/total-calculator';
 import { getCo2MalusDescription } from '@/lib/calculations/malus-co2';
 import { getWeightMalusDescription } from '@/lib/calculations/malus-weight';
@@ -81,7 +81,7 @@ export function Calculator({ selectedVehicle, importParams }: CalculatorProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Calculator className="h-5 w-5 text-purple-600" />
+          <CalculatorIcon className="h-5 w-5 text-purple-600" />
           Résultats du calcul
         </CardTitle>
       </CardHeader>
@@ -186,7 +186,7 @@ function CalculatorPlaceholder() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Calculator className="h-5 w-5 text-purple-600" />
+          <CalculatorIcon className="h-5 w-5 text-purple-600" />
           Résultats du calcul
         </CardTitle>
       </CardHeader>
@@ -208,7 +208,7 @@ function CalculatorError() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Calculator className="h-5 w-5 text-red-600" />
+          <CalculatorIcon className="h-5 w-5 text-purple-600" />
           Erreur de calcul
         </CardTitle>
       </CardHeader>
